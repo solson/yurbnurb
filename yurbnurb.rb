@@ -34,8 +34,8 @@ bot = Cinch::Bot.new do
             return r.url if r.body.chomp.include?("\n")
             
             r.body.chomp
-        rescue Patron::TimeoutError
-            "HTTP request timed out."
+        rescue Patron::Error => e
+            "A network error occurred: #{e.message}"
         end
     end
     
