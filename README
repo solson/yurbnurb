@@ -3,5 +3,5 @@ Yurbnurb is a little Ruby IRC bot using the Cinch gem. It provides an interface 
 Requirements
 ------------
 
-Yurbnurb requires the 'cinch' and 'patron' gems.
+Yurbnurb requires the 'cinch', 'patron', and 'htmlentities' gems.
 

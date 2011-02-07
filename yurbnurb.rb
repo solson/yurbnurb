@@ -1,7 +1,7 @@
 require 'cinch'
 require 'patron'
 require 'uri'
-require 'cgi'
+require 'htmlentities'
 
 bot = Cinch::Bot.new do
     configure do |c|
@@ -13,7 +13,7 @@ bot = Cinch::Bot.new do
     helpers do
         def get_title(body)
             title = body[/<title>(.*?)<\/title>/m, 1]
-            CGI.unescapeHTML(title).gsub("\n", " ").strip if title
+            HTMLEntities.decode_entities(title).gsub("\n", " ").strip if title
         end
         
         def yubnub(query)
