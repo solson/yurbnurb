@@ -39,7 +39,7 @@ bot = Cinch::Bot.new do
         end
     end
 
-    on :message, /^#{Regexp.escape nick}\S*\s*(.+)$/ do |m, query|
+    on :message, /^#{Regexp.escape nick}\S*[:,]\s*(.+)$/ do |m, query|
         m.reply("#{m.user.nick}: #{yubnub(query)}")
     end
 end
