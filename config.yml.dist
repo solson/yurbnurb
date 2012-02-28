@@ -1,0 +1,4 @@
+nick: yurbnurb
+server: irc.example.net
+channels:
+  - '#example'
