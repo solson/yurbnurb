@@ -24,7 +24,7 @@ bot = Cinch::Bot.new do
   helpers do
     def get_title(body)
       title = body[/<title>(.*?)<\/title>/m, 1]
-      HTMLEntities.decode_entities(title).gsub("\n", " ").strip if title
+      HTMLEntities.new.decode(title).gsub("\n", " ").strip if title
     end
 
     def yubnub(query)
